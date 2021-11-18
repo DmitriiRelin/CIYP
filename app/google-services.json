@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "612960360038",
+    "project_id": "ciyp-fe511",
+    "storage_bucket": "ciyp-fe511.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:612960360038:android:6139930974c76ba9d67fa7",
+        "android_client_info": {
+          "package_name": "com.ciyp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "612960360038-0j5l6v6i7bdfb3la44qk6osmt32uc2of.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ciyp",
+            "certificate_hash": "8e8faa5c96996f6b6e111312db2b2aa09cb98518"
+          }
+        },
+        {
+          "client_id": "612960360038-097dk0638d21pg2ehtg7v14vi0plh8en.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0jx1lm5kLH7BLW7Is3GX1rl21g8mx5us"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "612960360038-097dk0638d21pg2ehtg7v14vi0plh8en.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

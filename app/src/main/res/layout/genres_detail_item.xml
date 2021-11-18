@@ -1,0 +1,64 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/small_layout_margin">
+
+    <View
+        android:id="@+id/viewSupporter"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/viewSupporter_layout_height"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView_poster" />
+
+    <View
+        android:id="@+id/viewBack"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height_0dp"
+        android:background="@drawable/favorite_item_background"
+        android:paddingBottom="@dimen/viewBack_padding_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/title_textView" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imageView_poster"
+        android:layout_width="@dimen/genres_detail_item_layout_width"
+        android:layout_height="@dimen/genres_detail_item_layout_height"
+        android:layout_marginStart="@dimen/big_layout_margin_start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="@dimen/medium_corner_radius" />
+
+    <TextView
+        android:id="@+id/title_textView"
+        style="@style/GenresDetailsItemTitleTextViewStyle"
+        android:layout_width="@dimen/layout_width_0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/release_date_textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageView_poster"
+        app:layout_constraintTop_toTopOf="@id/imageView_poster" />
+
+    <TextView
+        android:id="@+id/release_date_textView"
+        style="@style/GenresDetailsItemDescriptionTextViewStyle"
+        android:layout_width="@dimen/layout_width_0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/vote_average_textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageView_poster"
+        app:layout_constraintTop_toBottomOf="@id/title_textView" />
+
+    <TextView
+        android:id="@+id/vote_average_textView"
+        style="@style/GenresDetailsItemDescriptionTextViewStyle"
+        android:layout_width="@dimen/layout_width_0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/viewSupporter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageView_poster"
+        app:layout_constraintTop_toBottomOf="@id/release_date_textView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,178 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.CIYP" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryVariant">@color/primaryColor</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="BottomNavigationViewTheme">
+        <item name="backgroundTint">@color/primaryColor</item>
+        <item name="itemIconTint">@color/secondaryLightColor</item>
+        <item name="itemTextColor">@color/secondaryLightColor</item>
+    </style>
+
+    <style name="roundImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
+        <item name="color">@color/white</item>
+    </style>
+
+    <style name="textInputLayout_style" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:hint">Search</item>
+        <item name="boxStrokeColor">@color/secondaryLightColor</item>
+        <item name="counterTextColor">@color/secondaryLightColor</item>
+        <item name="endIconDrawable">@drawable/ic_baseline_search_24</item>
+        <item name="endIconMode">custom</item>
+        <item name="endIconTint">@color/secondaryLightColor</item>
+        <item name="hintTextColor">@color/secondaryLightColor</item>
+        <item name="android:layout_margin">12dp</item>
+    </style>
+
+
+    <style name="textInputEditText_style">
+        <item name="android:textColor">@color/secondaryLightColor</item>
+        <item name="hintTextColor">@color/secondaryLightColor</item>
+        <item name="android:textCursorDrawable">@drawable/cursor</item>
+        <item name="android:textSize">20sp</item>
+        <item name="endIconMode">clear_text</item>
+    </style>
+
+    <style name="FavoritesEmptyListTextViewStyle">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:text">@string/favorites_empty_list</item>
+        <item name="android:textColor">@color/secondaryColor</item>
+        <item name="android:textSize">@dimen/big_title_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SwipeLayoutStyle">
+        <item name="android:layout_margin">@dimen/medium_margin_layout</item>
+        <item name="isFreeDragAfterOpen">true</item>
+        <item name="isTogether">true</item>
+        <item name="swipeDirection">left</item>
+    </style>
+
+    <style name="DeleteImageViewStyle">
+        <item name="android:layout_gravity">end</item>
+        <item name="android:background">@color/primaryDeleteColor</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingStart">@dimen/delete_image_medium_padding</item>
+        <item name="android:paddingEnd">@dimen/delete_image_medium_padding</item>
+        <item name="android:src">@drawable/ic_baseline_delete_forever_24</item>
+    </style>
+
+    <style name="FavoriteItemTitleTextViewStyle">
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@color/primaryColor</item>
+        <item name="android:gravity">center|start</item>
+        <item name="android:textColor">@color/secondaryLightColor</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/medium_text_size</item>
+        <item name="android:paddingEnd">@dimen/medium_padding_end</item>
+        <item name="android:paddingStart">@dimen/big_padding_start</item>
+    </style>
+
+    <style name="FavoriteItemDateTextViewStyle">
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@color/primaryColor</item>
+        <item name="android:gravity">center|start</item>
+        <item name="android:paddingStart">@dimen/big_padding_start</item>
+        <item name="android:textColor">@color/secondaryLightColor</item>
+        <item name="android:textSize">@dimen/small_text_size</item>
+    </style>
+
+    <style name="ErrorTitleTextViewStyle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">16dp</item>
+        <item name="android:text">@string/error_title</item>
+        <item name="android:textColor">@color/secondaryLightColor</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="ErrorDescriptionTextViewStyle">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">16dp</item>
+        <item name="android:text">@string/error_description</item>
+        <item name="android:textColor">@color/secondaryLightColor</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="CategoryTitleTextViewStyle">
+        <item name="android:background">@color/primaryColor</item>
+        <item name="android:padding">@dimen/small_padding</item>
+        <item name="android:textColor">@color/primaryTextColor</item>
+        <item name="android:textSize">@dimen/big_title_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CategoryDescriptionTextViewStyle">
+        <item name="android:background">@color/primaryColor</item>
+        <item name="android:padding">@dimen/small_padding</item>
+        <item name="android:textColor">@color/secondaryLightColor</item>
+        <item name="android:textSize">@dimen/medium_text_size</item>
+    </style>
+
+    <style name="ProgressBarStyle">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:indeterminateDrawable">@drawable/spinner_ring</item>
+        <item name="android:indeterminateOnly">true</item>
+    </style>
+
+
+    <style name="MovieItemTitleTextViewStyle">
+        <item name="android:layout_gravity">bottom</item>
+        <item name="android:paddingTop">@dimen/medium_padding_top</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/medium_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="MovieItemVoteAverageTextViewStyle">
+        <item name="android:layout_gravity">bottom</item>
+        <item name="android:paddingStart">@dimen/medium_padding_start</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/medium_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="GenresItemTitleTextViewStyle">
+        <item name="android:gravity">start</item>
+        <item name="android:paddingStart">@dimen/small_padding_start</item>
+        <item name="android:paddingTop">@dimen/small_padding_top</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/medium_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="GenresDetailsItemTitleTextViewStyle">
+        <item name="android:layout_marginStart">@dimen/medium_layout_margin_start</item>
+        <item name="android:layout_marginTop">@dimen/big_layout_margin_top</item>
+        <item name="android:layout_marginEnd">@dimen/medium_layout_margin_end</item>
+        <item name="android:paddingTop">@dimen/big_padding_top</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/medium_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="GenresDetailsItemDescriptionTextViewStyle">
+        <item name="android:layout_marginStart">@dimen/medium_layout_margin_start</item>
+
+        <item name="android:layout_marginEnd">@dimen/medium_layout_margin_end</item>
+        <item name="android:paddingTop">@dimen/big_padding_top</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/small_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+</resources>

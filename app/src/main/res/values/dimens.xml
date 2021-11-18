@@ -1,0 +1,67 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="medium_margin_layout">8dp</dimen>
+    <dimen name="delete_image_medium_padding">24dp</dimen>
+
+    <dimen name="circular_main_width">80dp</dimen>
+    <dimen name="circular_main_height">80dp</dimen>
+
+
+    //Layout_width/height
+    <dimen name="movie_item_layout_width">160dp</dimen>
+    <dimen name="movie_item_layout_height">220dp</dimen>
+    <dimen name="genres_item_layout_height">240dp</dimen>
+
+    <dimen name="genres_detail_item_layout_height">160dp</dimen>
+    <dimen name="genres_detail_item_layout_width">120dp</dimen>
+
+    <dimen name="viewSupporter_layout_height">15dp</dimen>
+    <dimen name="layout_height_0dp">0dp</dimen>
+    <dimen name="layout_width_0dp">0dp</dimen>
+
+
+
+
+
+    //Layout_margin
+    <dimen name="small_layout_margin">8dp</dimen>
+    <dimen name="medium_layout_margin">12dp</dimen>
+
+    <dimen name="small_layout_margin_top">8dp</dimen>
+    <dimen name="small_layout_margin_bottom">8dp</dimen>
+
+    <dimen name="medium_layout_margin_start">12dp</dimen>
+    <dimen name="medium_layout_margin_end">12dp</dimen>
+
+    <dimen name="big_layout_margin_start">16dp</dimen>
+    <dimen name="big_layout_margin_top">32dp</dimen>
+
+
+
+    //Corner_radius
+    <dimen name="medium_corner_radius">8dp</dimen>
+
+
+    //Padding
+    <dimen name="small_padding">4dp</dimen>
+    <dimen name="medium_padding_end">8dp</dimen>
+
+
+    <dimen name="small_padding_top">4dp</dimen>
+    <dimen name="medium_padding_top">8dp</dimen>
+    <dimen name="big_padding_top">16dp</dimen>
+
+    <dimen name="medium_padding_start">8dp</dimen>
+    <dimen name="small_padding_start">4dp</dimen>
+
+    <dimen name="big_padding_start">12dp</dimen>
+
+    <dimen name="viewBack_padding_bottom">20dp</dimen>
+
+    //TextSize
+    <dimen name="big_title_text_size">28sp</dimen>
+    <dimen name="medium_text_size">18sp</dimen>
+    <dimen name="small_text_size">14sp</dimen>
+</resources>
