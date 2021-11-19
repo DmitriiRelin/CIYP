@@ -5,15 +5,18 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.Keep
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ciyp.App
 import com.ciyp.databinding.FragmentFavoritesBinding
 import com.ciyp.ui.favorites.favoritesRecyclerVIew.FavoriteAdapter
 import javax.inject.Inject
 
+@Keep
 class FavoritesFragment : Fragment() {
 
     @Inject
@@ -25,8 +28,8 @@ class FavoritesFragment : Fragment() {
 
     private val favoritesAdapter = FavoriteAdapter(
         onItemClickListenerFavorites = {
-//            val action = FavoritesFragmentDirections.actionNavigationFavoritesToDetailsFragment(it)
-//            findNavController().navigate(action)
+            val action = FavoritesFragmentDirections.actionNavigationFavoritesToDetailsFragment(it.id)
+            findNavController().navigate(action)
         },
         onItemClickDelete = {
             viewModel.deleteFavoriteMovie(it)

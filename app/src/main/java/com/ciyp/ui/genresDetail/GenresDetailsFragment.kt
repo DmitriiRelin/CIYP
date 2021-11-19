@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.Keep
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -18,6 +19,7 @@ import com.ciyp.ui.genresDetail.genresDetailsRecyclerView.GenresDetailsAdapter
 import io.reactivex.rxjava3.disposables.Disposable
 import javax.inject.Inject
 
+@Keep
 class GenresDetailsFragment : Fragment() {
 
     @Inject
@@ -34,7 +36,7 @@ class GenresDetailsFragment : Fragment() {
 
     private val adapter = GenresDetailsAdapter { movie ->
         val action =
-            GenresDetailsFragmentDirections.actionGenresDetailsFragmentToDetailsFragment(movie)
+            GenresDetailsFragmentDirections.actionGenresDetailsFragmentToDetailsFragment(movie.id)
         findNavController().navigate(action)
     }
 

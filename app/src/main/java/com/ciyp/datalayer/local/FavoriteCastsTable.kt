@@ -9,5 +9,5 @@ data class FavoriteCastsTable(
     @PrimaryKey
     val castId: Int,
     val name: String,
-    val profile_path: String,
+    val profile_path: String?,
 )

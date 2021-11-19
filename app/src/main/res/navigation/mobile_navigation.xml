@@ -9,7 +9,7 @@
         android:id="@+id/navigation_home"
         android:name="com.ciyp.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" >
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_navigation_home_to_detailsFragment"
             app:destination="@id/detailsFragment" />
@@ -19,7 +19,7 @@
         android:id="@+id/navigation_genres"
         android:name="com.ciyp.ui.genres.GenresFragment"
         android:label="@string/title_genres"
-        tools:layout="@layout/fragment_genres" >
+        tools:layout="@layout/fragment_genres">
         <action
             android:id="@+id/action_navigation_genres_to_genresDetailsFragment"
             app:destination="@id/genresDetailsFragment" />
@@ -29,7 +29,7 @@
         android:id="@+id/navigation_favorites"
         android:name="com.ciyp.ui.favorites.FavoritesFragment"
         android:label="@string/title_favorites"
-        tools:layout="@layout/fragment_favorites" >
+        tools:layout="@layout/fragment_favorites">
         <action
             android:id="@+id/action_navigation_favorites_to_detailsFragment"
             app:destination="@id/detailsFragment" />
@@ -40,10 +40,8 @@
         android:label="DetailsFragment"
         tools:layout="@layout/fragment_details">
         <argument
-            android:name="movie"
-            android:defaultValue="@null"
-            app:argType="com.ciyp.domain.entites.Movie"
-            app:nullable="true" />
+            android:name="moviId"
+            app:argType="integer"/>
     </fragment>
 
     <fragment
@@ -53,8 +51,8 @@
         tools:layout="@layout/fragment_genres_detail">
         <argument
             android:name="id"
-            app:argType="integer"
-            android:defaultValue="1" />
+            android:defaultValue="1"
+            app:argType="integer" />
         <action
             android:id="@+id/action_genresDetailsFragment_to_detailsFragment"
             app:destination="@id/detailsFragment" />

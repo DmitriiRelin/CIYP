@@ -1,5 +1,6 @@
 package com.ciyp.ui.detail
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -40,13 +41,13 @@ class DetailsVieModel @Inject constructor(
         id?.let {
             disposable2 = getVideoUseCase.getVideo(id).subscribeOn(Schedulers.io())
                 ?.observeOn(AndroidSchedulers.mainThread())
-                ?.subscribe({video ->
-                    if(video.results.isNotEmpty()) {
+                ?.subscribe({ video ->
+                    if (video.results.isNotEmpty()) {
                         //val url = "https://www.youtube.com/watch?v=${video.results[0].key}"
                         val url = video.results[0].key
-                        _videoLiveData.value = video.results.map{it.key}
+                        _videoLiveData.value = video.results.map { it.key }
                     }
-                       _errorVideoLiveData.value = "No Video"
+                    _errorVideoLiveData.value = "No Video"
                 }, {
                     _errorVideoLiveData.value = "Error Video"
                 })
@@ -57,11 +58,13 @@ class DetailsVieModel @Inject constructor(
         id?.let {
             disposable = getDetailMovieUseCase.getDetailMovie(id).subscribeOn(Schedulers.io())
                 ?.observeOn(AndroidSchedulers.mainThread())
-                ?.subscribe({
-                    _movieLiveData.value = it
-                }, {
-                    _errorLiveData.value = it
-                })
+                ?.subscribe({ movieDetails ->
+                    _movieLiveData.value = movieDetails
+                },
+                    {
+                        _errorLiveData.value = it
+                        Log.d("error", it.message.toString())
+                    })
         }
     }
 

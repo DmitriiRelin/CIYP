@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.Keep
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -15,6 +16,7 @@ import com.ciyp.ui.home.homeRecyclerView.base.CategoryWithListItem
 import com.ciyp.ui.home.homeRecyclerView.base.HomeAdapter
 import javax.inject.Inject
 
+@Keep
 class HomeFragment : Fragment() {
 
     @Inject
@@ -65,7 +67,7 @@ class HomeFragment : Fragment() {
 
     private fun setAdapter(listCategory: List<CategoryWithListItem>) {
         val adapter = HomeAdapter(listCategory) {
-            val action = HomeFragmentDirections.actionNavigationHomeToDetailsFragment(it)
+            val action = HomeFragmentDirections.actionNavigationHomeToDetailsFragment(it.id)
             findNavController().navigate(action)
         }
         binding.homeRecycler.layoutManager = LinearLayoutManager(context)

@@ -21,7 +21,7 @@ data class MovieDetailResponse(
     //  @SerializedName("production_countries") val production_countries : List<Production_countries>,
     @SerializedName("release_date") val release_date: String,
 //    @SerializedName("revenue") val revenue : Int,
-    @SerializedName("runtime") val runtime: Int,
+    @SerializedName("runtime") val runtime: Int?,
     //  @SerializedName("spoken_languages") val spoken_languages : List<Spoken_languages>,
 //    @SerializedName("status") val status : String,
 //    @SerializedName("tagline") val tagline : String,

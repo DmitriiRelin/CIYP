@@ -138,6 +138,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/runtime_textView" />
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/details_recyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
                 app:layout_constraintEnd_toEndOf="parent"
