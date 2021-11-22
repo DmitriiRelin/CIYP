@@ -5,8 +5,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.ciyp.R
 import com.ciyp.domain.entites.Cast
-import com.ciyp.domain.entites.Movie
-import com.ciyp.ui.home.homeRecyclerView.nested.MovieHolder
 
 class DetailAdapter(
     val list: List<Cast>,
@@ -24,6 +22,5 @@ class DetailAdapter(
     override fun getItemCount(): Int {
         return list.size
     }
-
 
 }

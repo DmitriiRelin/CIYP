@@ -5,10 +5,10 @@ import com.ciyp.datalayer.local.LocalDataSource
 import com.ciyp.datalayer.remote.ApiService
 import com.ciyp.datalayer.remote.RemoteDataSource
 import com.ciyp.datalayer.repos.MovieRepositoryImpl
-import com.ciyp.domain.MovieRepository
-import com.ciyp.domain.entites.MovieDetails
 import com.ciyp.datalayer.repos.mapers.Mapper
 import com.ciyp.datalayer.repos.mapers.MapperResponsesToMovieDetails
+import com.ciyp.domain.MovieRepository
+import com.ciyp.domain.entites.MovieDetails
 import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides

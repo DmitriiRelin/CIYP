@@ -6,6 +6,7 @@ import com.bumptech.glide.Glide
 import com.ciyp.R
 import com.ciyp.databinding.MovieItemBinding
 import com.ciyp.domain.entites.Movie
+import com.ciyp.utils.glide.loadImage
 
 class MovieHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
@@ -14,12 +15,10 @@ class MovieHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     fun onBind(movie: Movie) {
         binding.textViewTitle.text = movie.title
         binding.textViewVoteAverage.text = movie.vote_average.toString()
-        Glide.with(itemView.context)
-            .load(URL_ADDRESS + movie.poster_path)
-            .placeholder(R.color.primaryColor)
-            .fitCenter()
-            .centerCrop()
-            .into(binding.imageViewPoster)
+        loadImage(itemView.context,
+            URL_ADDRESS + movie.poster_path,
+            R.color.primaryColor,
+            binding.imageViewPoster)
     }
 
     companion object {

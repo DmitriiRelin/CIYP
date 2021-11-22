@@ -156,7 +156,7 @@
 
     <style name="GenresDetailsItemTitleTextViewStyle">
         <item name="android:layout_marginStart">@dimen/medium_layout_margin_start</item>
-        <item name="android:layout_marginTop">@dimen/big_layout_margin_top</item>
+        <item name="android:layout_marginTop">@dimen/maxi_layout_margin_top</item>
         <item name="android:layout_marginEnd">@dimen/medium_layout_margin_end</item>
         <item name="android:paddingTop">@dimen/big_padding_top</item>
         <item name="android:textColor">@color/black</item>
@@ -166,13 +166,75 @@
 
     <style name="GenresDetailsItemDescriptionTextViewStyle">
         <item name="android:layout_marginStart">@dimen/medium_layout_margin_start</item>
-
         <item name="android:layout_marginEnd">@dimen/medium_layout_margin_end</item>
         <item name="android:paddingTop">@dimen/big_padding_top</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">@dimen/small_text_size</item>
         <item name="android:textStyle">bold</item>
     </style>
+
+    <style name="DetailTitleTextViewStyle">
+        <item name="android:layout_margin">@dimen/small_layout_margin</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/big_title_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DetailSecondaryFieldsStyle">
+        <item name="android:layout_margin">@dimen/small_layout_margin</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/secondaryLightColor</item>
+        <item name="android:textSize">@dimen/medium_text_size</item>
+    </style>
+
+    <style name="DetailOverviewTextViewStyle">
+        <item name="android:layout_marginStart">@dimen/small_layout_margin</item>
+        <item name="android:layout_marginTop">@dimen/big_layout_margin_top</item>
+        <item name="android:layout_marginEnd">@dimen/small_layout_margin</item>
+        <item name="android:layout_marginBottom">@dimen/big_layout_margin_bottom</item>
+        <item name="android:textColor">@color/secondaryLightColor</item>
+        <item name="android:textSize">@dimen/small_text_size</item>
+    </style>
+
+    <style name="DetailCastsTextViewStyle">
+        <item name="android:layout_margin">@dimen/small_layout_margin</item>
+        <item name="android:gravity">start</item>
+        <item name="android:paddingStart">@dimen/small_padding_start</item>
+        <item name="android:textColor">@color/secondaryLightColor</item>
+        <item name="android:textSize">@dimen/medium_text_size</item>
+        <item name="android:text">@string/casts_title</item>
+    </style>
+
+    <style name="FloatingActionButtonStyle">
+        <item name="android:layout_marginRight">@dimen/big_layout_margin_end</item>
+        <item name="android:backgroundTint">@color/secondaryLightColor</item>
+    </style>
+
+    <style name="DetailItemNameStyle">
+        <item name="android:layout_margin">@dimen/small_layout_margin</item>
+        <item name="android:textColor">@color/secondaryColor</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/small_text_size</item>
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </resources>

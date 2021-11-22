@@ -68,15 +68,6 @@ class DetailsVieModel @Inject constructor(
         }
     }
 
-
-//    fun addToFavorite() {
-//        _movieLiveData.value?.let { movie ->
-//            viewModelScope.launch {
-//                addFavoriteMovieUseCase.addToFavorite(movie)
-//            }
-//        }
-//    }
-
     fun changeFavoriteStatus() {
         _movieLiveData.value?.let {
             if (it.isInFavorite == false) {

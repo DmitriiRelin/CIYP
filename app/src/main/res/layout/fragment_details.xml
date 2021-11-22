@@ -9,7 +9,7 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"
         android:layout_width="match_parent"
-        android:layout_height="280dp"
+        android:layout_height="@dimen/base_height_app_bar"
         android:fitsSystemWindows="true"
         android:theme="@style/Theme.CIYP">
 
@@ -22,14 +22,13 @@
             app:collapsedTitleTextAppearance="@style/Theme.CIYP"
             app:contentScrim="@color/primaryLightColor"
             app:expandedTitleTextAppearance="@style/Theme.CIYP"
-            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
-            app:title="Burger Combo">
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
 
 
             <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
                 android:id="@+id/youtube_player_view"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="@dimen/base_height_youTubePlayerView"
                 app:autoPlay="false"
                 app:enableLiveVideoUi="true"
                 app:showFullScreenButton="false" />
@@ -37,7 +36,7 @@
             <ImageView
                 android:id="@+id/youtube_view"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="@dimen/base_height_imageView_video_not_found"
                 android:visibility="gone" />
 
 
@@ -63,98 +62,86 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="30dp">
+            android:padding="@dimen/big_padding">
 
 
             <TextView
                 android:id="@+id/original_title_textView"
+                style="@style/DetailTitleTextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/big_title_text_size"
-                android:textStyle="bold"
-                android:textColor="@color/white"
-                android:gravity="center"
-                android:text="ТИТУЛ"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintEnd_toStartOf="@id/vote_average_textView"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/original_title_textView"
-                app:srcCompat="@drawable/ic_baseline_vote_average_24" />
 
             <TextView
                 android:id="@+id/vote_average_textView"
-                android:layout_width="0dp"
+                style="@style/DetailSecondaryFieldsStyle"
+                android:layout_width="@dimen/layout_width_0dp"
                 android:layout_height="wrap_content"
-                android:textColor="@color/secondaryLightColor"
-                android:textSize="@dimen/medium_text_size"
-                android:gravity="center"
                 app:layout_constraintBottom_toTopOf="@id/release_date_textView"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/original_title_textView" />
 
             <TextView
                 android:id="@+id/release_date_textView"
+                style="@style/DetailSecondaryFieldsStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textColor="@color/secondaryLightColor"
-                android:textSize="@dimen/medium_text_size"
-
                 app:layout_constraintBottom_toTopOf="@id/runtime_textView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+                app:layout_constraintTop_toBottomOf="@+id/vote_average_textView" />
 
             <TextView
                 android:id="@+id/runtime_textView"
+                style="@style/DetailSecondaryFieldsStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
-                android:gravity="center"
                 app:layout_constraintBottom_toTopOf="@id/overview_textView"
-                android:textColor="@color/secondaryLightColor"
-                android:textSize="@dimen/medium_text_size"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/release_date_textView" />
 
             <TextView
                 android:id="@+id/overview_textView"
+                style="@style/DetailOverviewTextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/secondaryLightColor"
-                android:textSize="@dimen/small_text_size"
-
+                app:layout_constraintBottom_toTopOf="@id/cast_textView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/runtime_textView" />
 
+            <TextView
+                android:id="@+id/cast_textView"
+                style="@style/DetailCastsTextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/details_recyclerView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/overview_textView" />
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/details_recyclerView"
                 android:layout_width="match_parent"
-                android:layout_height="160dp"
+                android:layout_height="@dimen/base_height_cast_recyclerView"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/overview_textView"
-                app:layout_constraintBottom_toBottomOf="parent"/>
+                app:layout_constraintTop_toBottomOf="@+id/cast_textView" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/add"
+        style="@style/FloatingActionButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="16dp"
-        android:backgroundTint="#F1C68C"
         android:baselineAlignBottom="false"
         android:clickable="true"
         android:src="@drawable/ic_baseline_favorites_star_24"

@@ -19,7 +19,7 @@ class YoutubeLoader(
     var counter = 0
 
     fun loadVideo(
-        listUrls: List<String>
+        listUrls: List<String>,
     ) {
         lifecycle.addObserver(youTubePlayerView)
         youTubePlayerView.addYouTubePlayerListener(object :
@@ -40,7 +40,7 @@ class YoutubeLoader(
                     loadVideo(listUrls)
                 } else {
                     youTubePlayerView.visibility = View.GONE
-                    errorImageView.setImageResource(R.drawable.ic_baseline_favorites_star_24)
+                    errorImageView.setImageResource(R.drawable.ic_baseline_missed_video_call_24)
                     errorImageView.visibility = View.VISIBLE
                 }
 

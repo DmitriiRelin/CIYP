@@ -41,7 +41,7 @@
         tools:layout="@layout/fragment_details">
         <argument
             android:name="moviId"
-            app:argType="integer"/>
+            app:argType="integer" />
     </fragment>
 
     <fragment

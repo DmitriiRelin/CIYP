@@ -6,9 +6,6 @@ import com.ciyp.di.DaggerAppComponent
 
 class App: Application() {
 
-    //843241
-
-
     lateinit var appComponent: AppComponent
 
     override fun onCreate() {

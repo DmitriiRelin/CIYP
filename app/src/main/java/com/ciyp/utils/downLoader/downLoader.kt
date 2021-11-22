@@ -15,8 +15,6 @@ fun downLoadWithByte(storageReference: StorageReference, imageView: ImageView, i
         val bitmap: Bitmap = BitmapFactory.decodeByteArray(it, 0, it.size)
         imageView.setImageBitmap(bitmap)
 
-
     }).addOnFailureListener(OnFailureListener {
-
     })
 }

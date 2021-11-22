@@ -4,12 +4,12 @@ import com.ciyp.datalayer.local.LocalDataSource
 import com.ciyp.datalayer.remote.RemoteDataSource
 import com.ciyp.datalayer.remote.dto.genres.listOfGenres.ListOfGenres
 import com.ciyp.datalayer.remote.dto.video.ResponseVideo
+import com.ciyp.datalayer.repos.mapers.Mapper
+import com.ciyp.datalayer.repos.mapers.MapperResponsesToMovieDetails
 import com.ciyp.domain.MovieRepository
 import com.ciyp.domain.entites.Movie
 import com.ciyp.domain.entites.MovieDetails
 import com.ciyp.ui.home.homeRecyclerView.base.CategoryWithListItem
-import com.ciyp.datalayer.repos.mapers.Mapper
-import com.ciyp.datalayer.repos.mapers.MapperResponsesToMovieDetails
 import io.reactivex.rxjava3.core.Single
 import javax.inject.Inject
 
@@ -22,7 +22,11 @@ class MovieRepositoryImpl @Inject constructor(
     override fun getNowPlayingMovieList(): Single<List<Movie>> {
         return dataSource.getNowPlayingMovieList().map { responseResult ->
             responseResult.results.map { movieFromApi ->
-                Movie(movieFromApi.id, movieFromApi.title, movieFromApi.poster_path, movieFromApi.vote_average, movieFromApi.release_date)
+                Movie(movieFromApi.id,
+                    movieFromApi.title,
+                    movieFromApi.poster_path,
+                    movieFromApi.vote_average,
+                    movieFromApi.release_date)
             }
         }
     }
@@ -30,7 +34,11 @@ class MovieRepositoryImpl @Inject constructor(
     override fun getTopRatedMovieList(): Single<List<Movie>> {
         return dataSource.getTopRatedMovieList().map { responseResult ->
             responseResult.results.map { movieFromApi ->
-                Movie(movieFromApi.id, movieFromApi.title, movieFromApi.poster_path, movieFromApi.vote_average, movieFromApi.release_date)
+                Movie(movieFromApi.id,
+                    movieFromApi.title,
+                    movieFromApi.poster_path,
+                    movieFromApi.vote_average,
+                    movieFromApi.release_date)
             }
         }
     }
@@ -38,7 +46,11 @@ class MovieRepositoryImpl @Inject constructor(
     override fun getUpcomingMovieList(): Single<List<Movie>> {
         return dataSource.getUpcomingMovieList().map { responseResult ->
             responseResult.results.map { movieFromApi ->
-                Movie(movieFromApi.id, movieFromApi.title, movieFromApi.poster_path, movieFromApi.vote_average, movieFromApi.release_date)
+                Movie(movieFromApi.id,
+                    movieFromApi.title,
+                    movieFromApi.poster_path,
+                    movieFromApi.vote_average,
+                    movieFromApi.release_date)
             }
         }
     }
@@ -77,8 +89,8 @@ class MovieRepositoryImpl @Inject constructor(
                 Movie(movieWithSpecificGenres.id,
                     movieWithSpecificGenres.title,
                     movieWithSpecificGenres.posterPath,
-                movieWithSpecificGenres.voteAverage,
-                movieWithSpecificGenres.releaseDate)
+                    movieWithSpecificGenres.voteAverage,
+                    movieWithSpecificGenres.releaseDate)
             }
         }
     }
@@ -86,7 +98,11 @@ class MovieRepositoryImpl @Inject constructor(
     override fun getPopularMovieList(page: Int?): Single<List<Movie>> {
         return dataSource.getPopularMovieList(page).map { responseResult ->
             responseResult.results.map { movieFromApi ->
-                Movie(movieFromApi.id, movieFromApi.title, movieFromApi.poster_path, movieFromApi.vote_average, movieFromApi.release_date)
+                Movie(movieFromApi.id,
+                    movieFromApi.title,
+                    movieFromApi.poster_path,
+                    movieFromApi.vote_average,
+                    movieFromApi.release_date)
             }
         }
     }
