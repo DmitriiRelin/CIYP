@@ -20,15 +20,18 @@
 ## Tech Stack:
 
 <li> MVVM </li>
-<li> Room </li>
+<li> Dagger2 </li>
+<li> RXJava2 </li>
+<li> Room (Many-to-many relations) </li>
+<li> Extension functions </li>
 <li> Retrofit </li>
 <li> JSON data parsing </li>
 <li> SwipeLayout </li>
-<li> Hilt </li>
-<li> Coroutines </li>
-<li> Flow </li>
 <li> Glide </li>
 <li> Paging3 </li>
+<li> FireBase (Storing pictures in the cloud and working with them) </li>
+<li> Mappers </li>
+<li> Youtubeplayer </li>
 <li> RecyclerView/ViewType/DiffUtil </li>
 <li> Android Navigation Component </li>
 
